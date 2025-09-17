@@ -26,11 +26,11 @@ void GameController::RunGame()
 
         GLint loc = 0;
         loc = glGetUniformLocation(shader->GetProgramID(), "RenderRedChannel");
-        glUniform1i(loc, (int)OpenGL::ToolWindow::RenderRedChannel);
+        glUniform1f(loc, (float)OpenGL::ToolWindow::RenderRedChannel);
         loc = glGetUniformLocation(shader->GetProgramID(), "RenderGreenChannel");
-        glUniform1i(loc, (int)OpenGL::ToolWindow::RenderGreenChannel);
+        glUniform1f(loc, (float)OpenGL::ToolWindow::RenderGreenChannel);
         loc = glGetUniformLocation(shader->GetProgramID(), "RenderBlueChannel");
-        glUniform1i(loc, (int)OpenGL::ToolWindow::RenderBlueChannel);
+        glUniform1f(loc, (float)OpenGL::ToolWindow::RenderBlueChannel);
 
         glClear(GL_COLOR_BUFFER_BIT);
         mesh->Render();

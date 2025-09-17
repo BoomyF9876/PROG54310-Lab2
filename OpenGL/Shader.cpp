@@ -60,8 +60,6 @@ void Shader::CreateShaderProgram(const char* _vertexFilePath, const char* _fragm
     GLuint fragmentShaderID = LoadShaderFile(_fragmentFilePath, GL_FRAGMENT_SHADER);
     glLinkProgram(programID);
 
-    GLint result = GL_FALSE;
-    int infoLogLength = 0;
     glGetProgramiv(programID, GL_LINK_STATUS, &result);
     glGetProgramiv(programID, GL_INFO_LOG_LENGTH, &infoLogLength);
     EvaluateShader(infoLogLength, programID);
